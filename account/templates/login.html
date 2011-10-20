@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block extrahead %}
+    <script src="{{ STATIC_URL }}js/django-validate.js"></script>
+    <script src="{{ STATIC_URL }}js/login.js"></script>
+{% endblock %}
+{% block topbar %}
+    <div class="fill">
+    	<div class="container">
+    	    <h1><center>Login</center></h1>
+        </div>
+    </div>
+{% endblock %}
+{% block container %}
+    <form action="{% url account.views.login %}" method="post" id="login-form" class="form-stacked">
+        {% csrf_token %}
+        <div class="clearfix">
+            <div class="input">
+                <label for="username"><center>Username</center></label>
+                <input id="username" name="username" type="text" />
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="input">
+                <label for="password"><center>Password</center></label>
+                <input id="password" name="password" type="password" />
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="input">
+                <a href="/forgot"><em>Forgot your password?</em></a><p><p>
+                <input name="Submit" class="btn primary" type="submit" value="Log In" />
+            </div>
+        </div>
+    </form>
+{% endblock %}

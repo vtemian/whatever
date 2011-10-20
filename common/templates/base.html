@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Absente</title>
+        <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="{{ STATIC_URL }}js/jquery-1.6.4.min.js"></script>
+        {% block extrahead %}
+        {% endblock %}
+    </head>
+
+<body>
+ <div class="container">
+    <div class="topbar">
+        {% block topbar %}
+        {% endblock %}
+    </div>
+    <br /><br /><br /><br /><br />
+    <div class="container">
+        <center>
+         {% block container %}
+         {% endblock %}
+        </center>
+    </div>
+    <center>
+        <div class="modal-footer">
+            <small>&copy; 2011 Vlad Temian & Sorin Guga</small>
+        </div>
+    </center>
+</body>
+</html>
